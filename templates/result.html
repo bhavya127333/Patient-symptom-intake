@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+
+        body{
+            background:#f4f8fc;
+            font-family:Arial;
+        }
+
+        .result-container{
+            width:80%;
+            margin:auto;
+            margin-top:40px;
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0px 0px 15px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+            color:#0077ff;
+            margin-bottom:30px;
+        }
+
+        .summary-box{
+            background:#f8fbff;
+            border:1px solid #dbeafe;
+            padding:25px;
+            border-radius:10px;
+            white-space:pre-wrap;
+            line-height:1.7;
+        }
+
+        .buttons{
+            margin-top:30px;
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+
+        button{
+            padding:15px 30px;
+            border:none;
+            border-radius:10px;
+            background:#0077ff;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#005fd1;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <h1>AI Patient Intake Summary</h1>
+
+    <div class="summary-box">
+        {{ summary }}
+    </div>
+
+    <div class="buttons">
+
+        <a href="/dashboard">
+            <button>Back</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
